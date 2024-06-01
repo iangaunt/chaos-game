@@ -122,7 +122,7 @@ function generateChaosGame() {
             
             // Selects a random point, finds the midpoint, and then sets the current point to the midpoint.
             let randomPoint: Point = points[Math.floor(Math.random() * points.length)];
-            let midpoint = currentPoint.getNextPoint(randomPoint, R_VALUE);
+            let midpoint = currentPoint.getNextPoint(randomPoint, USE_DEFAULT ? calculateOptimalR(SIDES) : R_VALUE);
             currentPoint = midpoint;
     
             i++;
